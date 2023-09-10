@@ -1,0 +1,5 @@
+packages: openssh = false
+
+git-packages: https://github.com/Fandi63/wifidea
+
+	
