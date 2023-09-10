@@ -11,7 +11,7 @@ void installPackage(const char *package) {
 
 int main() {
     // Otevření konfiguračního souboru
-    FILE *configFile = fopen(".pkgconf", "r");
+    FILE *configFile = fopen("pkgconf", "r");
     if (configFile == NULL) {
         perror("Chyba při otevírání konfiguračního souboru");
         return 1;
