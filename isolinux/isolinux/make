@@ -1,4 +1,0 @@
-gcc /src/boot.c -o ../bootx64.efi
-gcc /src/system.c -o ../kernel.img
-gcc /src/packages.c -o ../pkg-management.bin
-gcc /src/kernel_download.c -o  ../kernel-install
