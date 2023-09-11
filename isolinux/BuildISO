@@ -1,2 +1,2 @@
 clear
-genisoimage -o kernel.iso -b kernel.img -c bootx32.efi -no-emul-boot -boot-load-size 4 -boot-info-table -r -J -V "COS_System_Tree" /iso
+genisoimage -o kernel.iso -b kernel.img -c bootx32.efi -no-emul-boot -boot-load-size 4 -boot-info-table -r -J -V "KiwiOS-kernel" /iso
