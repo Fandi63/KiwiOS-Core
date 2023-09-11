@@ -1,4 +1,4 @@
 clear
-genisoimage -o kernel.iso -b kernel.img -c bootx32.efi -no-emul-boot -boot-load-size 4 -boot-info-table -r -J -V "KiwiOS-kernel" /iso
+genisoimage -o kernel.iso -b syscore.efi -c syscore.efi -no-emul-boot -boot-load-size 4 -boot-info-table -r -J -V "KiwiOS-kernel" /iso
 
 sudo dd bs=4M if=/iso/kernel.iso of=/dev/sda status=progress oflag=sync
