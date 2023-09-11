@@ -1,19 +1,14 @@
-#include <stdio.h>
+#include <efi.h>
+#include <efilib.h>
 
-int main() {
-    printf("    \\ \\  \n");
-    printf("     \\ \\  \n");
-    printf("       > `.\n");
-    printf("      / .-'  \n");
-    printf("     / /     \n");
-    printf("    / /      \n");
-    printf(" _.'  `._    \n");
-    printf("(       `'-./\n");
-    printf(" `._        / \n");
-    printf("    `\\\\  .'/  \n");
-    printf("      `\\.'    \n");
-    printf("------------------ \n");
-    printf("   K i w i O S \n");
+EFI_STATUS
+EFIAPI
+efi_main (EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable) {
+   InitializeLib(ImageHandle, SystemTable);
+   Print(L"===========\n");
+   Print(L"K I W I O S\n");
+   Print(L"-----------\n");
+   Print(L"Core version 1.0\n");
 
-    return 0;
+   return EFI_SUCCESS;
 }
