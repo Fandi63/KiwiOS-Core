@@ -3,3 +3,4 @@ gcc /src/system.c -o /kernel.img
 gcc /src/packages.c -o /pkg-management-system.bin
 gcc /src/kernel_download.c -o /kernel-install
 gcc -Ignu-efi-dir/inc -fpic -ffreestanding -fno-stack-protector -fno-stack-check -fshort-wchar -mno-red-zone -maccumulate-outgoing-args -c /src/system.c -o kernel.img
+ld -shared -Bsymbolic -Lgnu-efi-dir/x86_64/lib -Lgnu-efi-dir/x86_64/gnuefi -Tgnu-efi-dir/gnuefi/elf_x86_64_efi.lds gnu-efi-dir/x86_64/gnuefi/crt0-efi-x86_64.o /src/system. c -o main.so -lgnuefi -lefi
